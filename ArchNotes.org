@@ -1,0 +1,144 @@
+#+title: Arch Notes
+#+author: Dak
+
+
+This is my arch notes file for all the packages and commands needed to setup my arch config with hyprland
+
+To make it easy i install Arch linux with the kde desktop to start with and then install everything else. installing kde allows for easy wifi and copy and paste from emacs(or other notes) into terminal. this is optional but I use it as a backup incase hyprland breaks.
+
+* Git Clone this git
+Copy this .org file and all the rest of the files to the system then follow the steps bellow to get everything needed for it to run
+
+
+* Yay installation
+Installing Yay on Arch Linux
+
+Before you go on with Yay installation, you need some packages required to build it.
+Let me divide it into steps.
+
+** Step 1: Install the prerequisite packages
+It is always a good idea to refresh the package cache and update the system first:
+
+Sudo pacman -Syu
+
+Install the rerquired base-devel (contains tools such as makepkg etc) and git (required for cloning the yay git repository).
+
+sudo pacman -S --needed base-devel git
+
+With the --needed flag, it will NOT reinstall the already installed packages.
+
+Now that you have the required packages, it's time to get Yay on your system.
+
+** Step 2: Clone the Yay git repo and switch to it
+Use the git command to 'clone' the Yay repo. You can do it anywhere in the system, be it your home directory or otherwise.
+
+git clone https://aur.archlinux.org/yay.git
+
+Once done, switch to the cloned directory:
+
+cd yay
+
+Clone yay git repo
+
+It's time to install yay (finally).
+
+** Step 3: Install yay
+Actually, you are building it. You'll see a PKGBUILD file here. Use the following command to build the package from here:
+
+makepkg -si
+
+Follow the on-screen instructions. Press Y when you are asked to confirm.
+Build yay package in arch Linux
+
+Once the process finishes, verify that yay has been installed successfully by checking its version.
+
+yay --version
+
+Now that you have successfully installed it, you may remove the cloned Yay git repository. It is not needed anymore.
+Install Yay
+Proton Mail: Get a private, secure, and encrypted email account | Proton
+Proton Mail is the world’s largest secure email service with over 100 million users. Available on Web, iOS, Android, and desktop. Protected by Swiss privacy law.
+Proton
+Using Yay for package management
+
+The yay follows similar (but not identical) command structure as pacman. So it should not be difficult for you to manage AUR packages with Yay.
+
+Search for packages with:
+
+yay search_term
+
+Install the packages with:
+
+yay -S package_name
+
+Remove packages with:
+
+yay -R package_name
+
+To delete a package with its dependencies:
+
+yay -Rns package_name
+
+Upgrading (only) the AUR packages:
+
+yay -Sua
+
+** Updating Yay on Arch Linux
+💡
+Yay is also capable of upgrading non-AUR packages. The a flag in yay -Sua restricts it to AUR packages only.
+Also, it is recommended to not use sudo with yay. You'll be asked to enter the account password when it actually starts to install a package on your system.
+Upgrading Yay to a new version
+Now, you may wonder how you can upgrade Yay to a newer version when it's available.
+The answer is that you don't have to do anything special. Yay can update itself when you run the command:
+
+yay -Sua
+
+** Removing Yay from your Arch system
+If you don't like Yay or no longer need it anymore, you can remove it like any other package with the pacman command:
+
+sudo pacman -Rs yay
+
+** Source
+This was copied from https://itsfoss.com/install-yay-arch-linux/
+Credit: Abhishek Prakash
+
+
+* Installing Hyprland and other packages
+
+Run the following command to install hyprland and the other programs needed
+
+yay -S --needed hyprland waybar kitty emacs thunar wallust qt6ct gtk-4.0 sddm adobe-source-code-pro-fonts noto-fonts-emoji otf-font-awesome ttf-droid ttf-fira-code ttf-jetbrains-mono ttf-jetbrains-mono-nerd firefox hyprcursor hyprutils aquamarine hypridle hyprlock hyprland pyprland aylurs-gtk-shell cliphist curl grim gvfs gvfs-mtp imagemagick inxi jq kitty kvantum nano network-manager-applet pamixer pavucontrol pipewire-alsa playerctl polkit-gnome python-requests python-pyquery qt5ct qt6ct qt6-svg rofi-wayland slurp swappy swaync swww wallust wget wl-clipboard wlogout xdg-user-dirs xdg-utils yad
+
+
+
+* Setting up doom emacs
+this is how you setup doom emacs which emacs is needed to make the .org file show up nicely.
+you also then only have to edit the .org files and do org-babel-tangle and it will print out all the src code blocks into the files.
+if you make an update to the .org file run these two commands :save :org-babel-tangle
+
+Now to install doom emacs:
+
+** Dependencies
+yay -S --needed git emacs ripgrep fd
+
+** install
+run the git clone command
+
+git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
+~/.config/emacs/bin/doom install
+
+
+Must add to .bashrc
+        export PATH="~/.config/emacs/bin:$PATH"
+And then run
+        source ~/.bashrc
+
+then run doom update
+and doom sync
+
+* Apply Config
+copy .config folder from github to overwrite the .config folder on the machine
+alternatively you can just overwrite the folders/ files you want to use
+then reboot this should apply the configs when hyprland launches
+
+``
