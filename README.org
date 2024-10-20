@@ -151,4 +151,4 @@ copy .config folder from github to overwrite the .config folder on the machine
 alternatively you can just overwrite the folders/ files you want to use
 then reboot this should apply the configs when hyprland launches
 
-``
+If you want the wallpapers copy them into ~/pictures/wallpapers then click SUPER + W to select one
