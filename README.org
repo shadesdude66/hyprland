@@ -64,9 +64,9 @@ Follow the on-screen instructions. Press Y when you are asked to confirm.
 Build yay package in arch Linux
 
 Once the process finishes, verify that yay has been installed successfully by checking its version.
-
+#+begin_src
 yay --version
-
+#+end_src
 Now that you have successfully installed it, you may remove the cloned Yay git repository. It is not needed anymore.
 Install Yay
 Proton Mail: Get a private, secure, and encrypted email account | Proton
