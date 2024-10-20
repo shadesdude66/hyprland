@@ -67,33 +67,25 @@ Once the process finishes, verify that yay has been installed successfully by ch
 #+begin_src
 yay --version
 #+end_src
-Now that you have successfully installed it, you may remove the cloned Yay git repository. It is not needed anymore.
-Install Yay
-Proton Mail: Get a private, secure, and encrypted email account | Proton
-Proton Mail is the world’s largest secure email service with over 100 million users. Available on Web, iOS, Android, and desktop. Protected by Swiss privacy law.
-Proton
+Now that you have successfully installed it, you may remove the cloned Yay git repository. It is not needed anymore
+
 Using Yay for package management
 
 The yay follows similar (but not identical) command structure as pacman. So it should not be difficult for you to manage AUR packages with Yay.
 
 Search for packages with:
-
 yay search_term
 
 Install the packages with:
-
 yay -S package_name
 
 Remove packages with:
-
 yay -R package_name
 
 To delete a package with its dependencies:
-
 yay -Rns package_name
 
 Upgrading (only) the AUR packages:
-
 yay -Sua
 
 ** Updating Yay on Arch Linux
@@ -103,13 +95,15 @@ Also, it is recommended to not use sudo with yay. You'll be asked to enter the a
 Upgrading Yay to a new version
 Now, you may wonder how you can upgrade Yay to a newer version when it's available.
 The answer is that you don't have to do anything special. Yay can update itself when you run the command:
-
+#+begin_src
 yay -Sua
+#+end_src
 
 ** Removing Yay from your Arch system
 If you don't like Yay or no longer need it anymore, you can remove it like any other package with the pacman command:
-
+#+begin_src
 sudo pacman -Rs yay
+#+end_src
 
 ** Source
 This was copied from https://itsfoss.com/install-yay-arch-linux/
@@ -119,10 +113,9 @@ Credit: Abhishek Prakash
 * Installing Hyprland and other packages
 
 Run the following command to install hyprland and the other programs needed
-
-yay -S --needed hyprland waybar kitty emacs thunar wallust qt6ct gtk-4.0 sddm adobe-source-code-pro-fonts noto-fonts-emoji otf-font-awesome ttf-droid ttf-fira-code ttf-jetbrains-mono ttf-jetbrains-mono-nerd firefox hyprcursor hyprutils aquamarine hypridle hyprlock hyprland pyprland aylurs-gtk-shell cliphist curl grim gvfs gvfs-mtp imagemagick inxi jq kitty kvantum nano network-manager-applet pamixer pavucontrol pipewire-alsa playerctl polkit-gnome python-requests python-pyquery qt5ct qt6ct qt6-svg rofi-wayland slurp swappy swaync swww wallust wget wl-clipboard wlogout xdg-user-dirs xdg-utils yad
-
-
+#+begin_src
+yay -S --needed hyprland waybar kitty emacs thunar wallust qt6ct gtk-4.0 sddm adobe-source-code-pro-fonts noto-fonts-emoji otf-font-awesome ttf-droid ttf-fira-code ttf-jetbrains-mono ttf-jetbrains-mono-nerd firefox hyprcursor hyprutils aquamarine hypridle hyprlock hyprland pyprland aylurs-gtk-shell cliphist curl grim gvfs gvfs-mtp imagemagick inxi jq kitty kvantum nano network-manager-applet pamixer pavucontrol pipewire-alsa playerctl polkit-gnome python-requests python-pyquery qt5ct qt6ct qt6-svg rofi-wayland slurp swappy swaync swww wallust wget wl-clipboard wlogout xdg-user-dirs xdg-utils
+#+end_src
 
 * Setting up doom emacs
 this is how you setup doom emacs which emacs is needed to make the .org file show up nicely.
@@ -132,7 +125,9 @@ if you make an update to the .org file run these two commands :save :org-babel-t
 Now to install doom emacs:
 
 ** Dependencies
+#+begin_src
 yay -S --needed git emacs ripgrep fd
+#+end_src
 
 ** install
 run the git clone command
