@@ -133,10 +133,10 @@ yay -S --needed git emacs ripgrep fd
 
 ** install
 run the git clone command
-
+#+begin_src
 git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
 ~/.config/emacs/bin/doom install
-
+#+end_src
 
 Must add to .bashrc
         export PATH="~/.config/emacs/bin:$PATH"
