@@ -27,7 +27,9 @@ Let me divide it into steps.
 ** Step 1: Install the prerequisite packages
 It is always a good idea to refresh the package cache and update the system first:
 
+#+begin_src
 Sudo pacman -Syu
+#+end_src
 
 Install the rerquired base-devel (contains tools such as makepkg etc) and git (required for cloning the yay git repository).
 
