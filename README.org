@@ -1,6 +1,10 @@
 #+title: README
 #+author: Shadesdude66
 
+[[Intro]]
+[[Git Clone this git]]
+[[Yay installation]]
+
 
 
 * Intro
