@@ -1,5 +1,7 @@
 #+title: README
 #+author: Shadesdude66
+#+OPTIONS: toc:2
+
 
 * Intro
 This is a work in progress
