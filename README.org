@@ -32,8 +32,9 @@ Sudo pacman -Syu
 #+end_src
 
 Install the rerquired base-devel (contains tools such as makepkg etc) and git (required for cloning the yay git repository).
-
+#+begin_src
 sudo pacman -S --needed base-devel git
+#+end_src
 
 With the --needed flag, it will NOT reinstall the already installed packages.
 
@@ -41,21 +42,21 @@ Now that you have the required packages, it's time to get Yay on your system.
 
 ** Step 2: Clone the Yay git repo and switch to it
 Use the git command to 'clone' the Yay repo. You can do it anywhere in the system, be it your home directory or otherwise.
-
+#+begin_src
 git clone https://aur.archlinux.org/yay.git
+#+end_src
 
 Once done, switch to the cloned directory:
-
+#+begin_src
 cd yay
+#+end_src
 
-Clone yay git repo
-
-It's time to install yay (finally).
 
 ** Step 3: Install yay
 Actually, you are building it. You'll see a PKGBUILD file here. Use the following command to build the package from here:
-
+#+begin_src
 makepkg -si
+#+end_src
 
 Follow the on-screen instructions. Press Y when you are asked to confirm.
 Build yay package in arch Linux
