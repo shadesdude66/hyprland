@@ -1,0 +1,13 @@
+#+title: README
+#+author: Shadesdude66
+
+* Intro
+This is a work in progress
+This is my arch linux hyprland setup. i have gotten different things from different places. but customized it all to my liking
+I will walk through the install process and setup.
+All of my config files are actually in .org mode through emacs. i used doom emacs to set it all up
+But this Org file will walk through the install process of everything. Except Arch Linux. I will assume you already have that.
+
+Feel free to give me comments or opions on all of it. i am learning it all as i go. I just really liked how org mode was setup so I tried to make everything that
+
+If you would like the exact setup i am using at the moment here it is:
