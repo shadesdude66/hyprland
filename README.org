@@ -14,7 +14,7 @@ If you would like the exact setup i am using at the moment here it is:
 
 To make it easy i install Arch linux with the kde desktop to start with and then install everything else. installing kde allows for easy wifi and copy and paste from emacs(or other notes) into terminal. this is optional but I use it as a backup incase hyprland breaks.
 
-![Alt text](https://github.com/shadesdude66/hyprland/blob/main/setup1.png)
+[[https://github.com/shadesdude66/hyprland/blob/main/setup1.png]]
 
 * Git Clone this git
 Copy this .org file and all the rest of the files to the system then follow the steps bellow to get everything needed for it to run
